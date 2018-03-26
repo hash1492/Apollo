@@ -1,0 +1,11 @@
+<div>
+  <!-- shell works! -->
+  <mat-toolbar color="primary">
+    <span>Apollo</span>
+    <span *ngIf="isLoggedIn" class="logout-btn">{{currentUser.name}}</span>
+
+    <button  *ngIf="isLoggedIn" (click)="logout()" class="btn btn-default logout-btn">Logout</button>
+  </mat-toolbar>
+  
+  <router-outlet></router-outlet>
+</div>

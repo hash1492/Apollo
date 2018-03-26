@@ -1,0 +1,12 @@
+<div>
+  <div class="chat-list-container">
+      <div class="list-group">
+          <app-chat-list-item *ngFor="let chat of chats" [chat]="chat" [isSelectedChat]="chat.id === selectedChat.id" (click)="openChat($event, chat)"></app-chat-list-item>
+      </div>
+      
+
+      <ul class="list-group">
+          <li class="list-group-item"  [hidden]="chats.length !== 0">No chats found</li>
+        </ul>
+  </div>
+</div>

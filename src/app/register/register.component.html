@@ -1,0 +1,28 @@
+<div>
+  <form class="container registration-form text-center">
+    
+    <div class="form-group">
+      <label for="exampleInputName">Full Name</label>
+      <input type="text" [(ngModel)]="user.name" class="form-control" name="userName" aria-describedby="nameHelp" placeholder="John Doe">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email Address</label>
+      <input type="email" [(ngModel)]="user.email" class="form-control" name="userEmail" aria-describedby="emailHelp" placeholder="john.doe@gmail.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" [(ngModel)]="user.password" class="form-control" name="userPassword" placeholder="********">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" [(ngModel)]="user.confirmPassword" class="form-control" name="userPassword" placeholder="********">
+    </div>
+
+    <button type="button" (click)="register()" class="btn btn-primary">Register</button>
+
+    <div>
+      <a routerLink="/login">Already a user? Login</a>
+    </div>
+  </form>
+</div>

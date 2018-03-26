@@ -1,0 +1,19 @@
+<div>
+    <div class="chat-box-heading" >
+        {{chatDetails.otherUserName}}
+    </div>
+    <div class="messages-container" #scrollMe>
+        <div *ngFor="let msg of chatDetails.messages"  class="message-row">
+            <div class="chat-message" [class.my-message]="isMyMessage(msg)" [class.others-message]="!isMyMessage(msg)">
+                {{msg.text}}
+                <div class="message-time">
+                    {{msg.timeCreated | date: 'shortTime'}}
+                </div>
+            </div>
+          </div>
+    </div>      
+    <mat-form-field class="example-full-width message-input">
+      <input type="text" matInput [(ngModel)]="message" (keyup.enter)="sendMessage()" placeholder="Type here...">
+      <mat-icon matSuffix (click)="sendMessage()" class="send-message-button">send</mat-icon>
+    </mat-form-field>
+</div>

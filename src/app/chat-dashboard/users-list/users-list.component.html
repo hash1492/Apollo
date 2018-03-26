@@ -1,0 +1,11 @@
+<div>
+
+  <mat-form-field class="example-full-width">
+      <input type="text" matInput [(ngModel)]="userName" (ngModelChange)="searchUser($event)" placeholder="Enter full name here..." class="searchUserInput" name="searchUser" >
+    </mat-form-field>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users" (click)="openChatWithUser(user)">{{user.name}}</li>
+    <li class="list-group-item"  [hidden]="userName.length == 0 || users.length !== 0">No users found</li>
+  </ul>
+</div>

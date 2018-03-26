@@ -1,0 +1,48 @@
+.chat-box-heading {
+    padding: 15px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.messages-container {
+    overflow-y:auto;
+    height: 500px;
+}
+
+.message-input {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}
+.message-row {
+    display: block;
+    clear:both;
+}
+
+.chat-message {
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.others-message {
+    background-color:#ff4400;
+    float: left;
+}
+
+.my-message {
+    background-color: blue;
+    float: right;
+}
+
+.message-time {
+    font-size: 10px;
+    color: white;
+}
+
+.send-message-button {
+    cursor: pointer;
+}

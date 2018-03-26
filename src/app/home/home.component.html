@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- home works! -->
+  <mat-toolbar color="default">
+    Home
+  </mat-toolbar>
+  <mat-grid-list cols="5">
+    <mat-grid-tile *ngFor="let video of videos" colspan="1" rowspan="1">
+      <mat-card class="video-card">
+
+        <img class="video-thumbnail" mat-card-image [src]="video.snippet.thumbnails.high.url" alt="Video Thumbnail">
+        <mat-card-content>
+          <!-- <label>{{video.snippet.title}}</label> -->
+          <label>This is the title</label>
+          <p>
+            <!-- {{video.snippet.description}} -->
+            this is the description
+          </p>
+          <p>{{video.snippet.publishedAt | date: 'medium'}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <button type="button" [disabled]="!previousPageToken" (click)="getMoreVideos(previousPageToken)">previous page</button>
+  <button type="button" [disabled]="!nextPageToken" (click)="getMoreVideos(nextPageToken)">next page</button>
+</div>

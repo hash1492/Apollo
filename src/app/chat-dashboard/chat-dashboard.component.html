@@ -1,0 +1,23 @@
+<div class="chat-dashboard">
+  <div class="row">
+    <div class="col-md-6 no-pad-right"  style="border-right: 1px solid #aaa">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" (click)="setActiveTab($event, 'Chats')">
+            <a class="nav-link"  [class.active]="activeTab === 'Chats'" href="" >Chats</a>
+          </li>
+          <li class="nav-item" (click)="setActiveTab($event, 'Users')">
+            <a class="nav-link" [class.active]="activeTab === 'Users'" href="" >Users</a>
+          </li>
+        </ul>
+        <div class="dashboard-tab-content" [hidden]="activeTab !== 'Chats'" >
+          <app-chats-list [selectedChat]='selectedChat' (chatSelected)="openChat($event)"></app-chats-list>
+        </div>
+        <div class="dashboard-tab-content" [hidden]="activeTab !== 'Users'">
+          <app-users-list (chatSelected)="openChat($event)"></app-users-list>
+        </div>
+    </div>
+    <div class="col-md-6 no-pad-left">
+      <app-chat-box *ngIf="selectedChat.id" [chatDetails]="selectedChat"></app-chat-box>
+    </div>
+  </div>
+</div>

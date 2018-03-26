@@ -1,0 +1,16 @@
+.nav-tabs .nav-item {
+    width: 50%;
+    text-align: center;
+}
+
+.dashboard-tab-content {
+    height: 80vh;
+}
+/* 
+.no-pad-left {
+    padding-left: 0px;
+}
+
+.no-pad-right {
+    padding-right: 0px;
+} */

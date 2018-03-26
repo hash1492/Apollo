@@ -1,4 +1,6 @@
-# HomemadeMeals
+# Apollo
+
+This is an Angular 5 project that using Angular Material 5.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
